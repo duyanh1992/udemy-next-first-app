@@ -5,8 +5,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a !important;
+    --foreground: #ededed !important;
   }
 }
 
@@ -35,8 +35,38 @@ a {
   text-decoration: none;
 }
 
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.not-found h1 {
+  font-size: 3rem; /* Large font for the main title */
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  font-size: 1.25rem; /* Slightly smaller text for additional information */
+  color: #6c757d; /* Lighter grey text color */
+}
+
+.not-found a {
+  margin-top: 2rem;
+  text-decoration: none; /* Remove underline */
+  color: #007bff; /* Blue color for links */
+  font-weight: bold;
+}
+
+.not-found a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
 @media (prefers-color-scheme: dark) {
   html {
-    color-scheme: dark;
+    color-scheme: dark !important;
   }
 }
