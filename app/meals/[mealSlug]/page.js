@@ -2,6 +2,7 @@ import Image from "next/image";
 import classes from "./page.module.css";
 import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
+import React from "react";
 
 export default function MealDetailsPage({ params }) {
   const newParams = React.use(params);

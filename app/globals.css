@@ -65,6 +65,19 @@ a {
   text-decoration: underline; /* Underline on hover */
 }
 
+.error {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.error h1 {
+  font-size: 5rem;
+  margin: 0;
+  font-weight: 900;
+  color: linear-gradient(90deg, #f9572a, #ffc905);
+  text-transform: uppercase;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark !important;
