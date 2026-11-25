@@ -4,6 +4,22 @@ import { getMeal } from "@/lib/meals";
 import { notFound } from "next/navigation";
 import React from "react";
 
+export async function generateMetadata({ params }) {
+  const { mealSlug } = await params;
+  console.log("mealSlug:", mealSlug);
+
+  const meal = getMeal(mealSlug);
+
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal.title,
+    description: meal.description,
+  };
+}
+
 export default function MealDetailsPage({ params }) {
   const newParams = React.use(params);
 
